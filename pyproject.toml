@@ -1,0 +1,10 @@
+[project]
+name = "rohonchain-strategy"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["rohonchain_strategy"]
+
+[tool.setuptools.package-dir]
+rohonchain_strategy = "src"
