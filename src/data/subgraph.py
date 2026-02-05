@@ -1,6 +1,5 @@
 """Subgraph client (historicals)."""
 import os
-from graphql import gql
 from graphqlclient import GraphQLClient
 
 SUBGRAPH = os.getenv("SUBGRAPH_URL")

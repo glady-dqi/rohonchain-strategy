@@ -5,6 +5,9 @@ CREATE TABLE IF NOT EXISTS market_catalog (
   condition_id TEXT,
   question TEXT,
   outcomes JSONB,
+  clob_token_ids JSONB,
+  active BOOLEAN,
+  closed BOOLEAN,
   created_at TIMESTAMP DEFAULT NOW()
 );
 

@@ -2,12 +2,12 @@
 from ..data.gamma_api import list_markets
 
 
-def build_catalog(limit=1000):
+def build_catalog(limit=1000, active=True, closed=False):
     # Placeholder: paginate and normalize into a catalog table
     offset = 0
     rows = []
     while True:
-        data = list_markets(limit=100, offset=offset)
+        data = list_markets(limit=100, offset=offset, active=active, closed=closed)
         items = data.get("markets", data) if isinstance(data, dict) else data
         if not items:
             break
@@ -17,6 +17,9 @@ def build_catalog(limit=1000):
                 "conditionId": m.get("conditionId"),
                 "question": m.get("question"),
                 "outcomes": m.get("outcomes"),
+                "clobTokenIds": m.get("clobTokenIds"),
+                "active": m.get("active"),
+                "closed": m.get("closed"),
             })
         offset += 100
         if offset >= limit:
