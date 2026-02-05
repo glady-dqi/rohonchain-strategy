@@ -49,6 +49,7 @@ pip install -r requirements.txt
 - IP solver default: **PuLP** (CBC). Replace with **Gurobi** if available.
 - LMSR/KL projection is implemented with configurable epsilon contraction.
 - Execution layer is modeled; no live trading without explicit enablement.
+- CLOB trades endpoint (`/data/trades`) is **authenticated**; set `CLOB_API_KEY` in `.env`.
 
 ## References
 - "Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets" (arXiv:2508.03474v1)
