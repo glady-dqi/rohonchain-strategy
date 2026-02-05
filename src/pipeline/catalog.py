@@ -1,5 +1,5 @@
 """Build MarketCatalog by joining Gamma markets/events to token IDs."""
-from .gamma_api import list_markets
+from ..data.gamma_api import list_markets
 
 
 def build_catalog(limit=1000):
